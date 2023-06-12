@@ -102,7 +102,8 @@ def handle(src, target, boxes, **kwArgs):
     I.paste(res) 
 
     #save using the original object
-    I.save(target, quality="keep")
+    #Kudos to David Pinto for pointing out how to save the info 
+    I.save(target, quality="keep", **I.info)
 
 
 
